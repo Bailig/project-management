@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+// btn color
+$btnDangerColor: #e6714e;
+$btnPrimaryColor: #4eb4d3;
+
+// navbar
+$navbarBackground: #dddddd;
+$navbarBackgroundShadow: #3b3939;
+$navbarColor: #777;
+
+// navbar selection mode
+$navbarBackgroundSelectionMode: #666;
+$navbarColorSelectionMode: #c4bebe;
+
+// project list
+$borderColor: #666;
+$dividerColor: #dddddd;
+
+// font
+$pFont: 'Muli', Verdana, Helvetica, sans-serif;
+
+// animation
+@keyframes fadeIn {
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+@keyframes headerIn {
+    form { background-color: $navbarBackground; }
+    to { background-color: $navbarBackgroundSelectionMode; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(1.04); }
+    to { transform: scale(1.08); }
+}
+
+@keyframes borderIn {
+    from { border: 0px solid $borderColor; }
+    to { border: 4px solid $borderColor; }
+}

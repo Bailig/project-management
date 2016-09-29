@@ -1,0 +1,144 @@
+@import 'Variable';
+
+body{
+    background-color: $navbarBackground;
+    #app{
+        padding-top: 8em;
+        background-color: white;
+        p, li, a, input{
+            font-family: $pFont;
+        }
+        .form-control, .btn{
+            border-radius: 0 0 0 0;
+        }
+        .btn-danger{
+            background-color: $btnDangerColor;
+            border: none;
+        }
+        .btn-primary{
+            background-color: $btnPrimaryColor;
+            border: none;
+        }
+    }
+}
+
+header{
+    .navbar-default{
+        border: none;
+        box-shadow: 0 0 5px 0 $navbarBackgroundShadow;
+        padding: 1em;
+    }
+    .navbar-btn{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+
+header#displayMode{
+    .navbar-brand, .form-control, .navbar-nav>li>a{
+        color: $navbarColor;
+        &:hover{
+            color: black;
+        }
+    }
+    .navbar-default{
+        background-color: $navbarBackground;
+    }
+    .navbar-collapse{
+        @media (min-width: 995px){               /*sm*/
+            width: 75%;
+        }
+    }
+    .navbar-form{
+        margin: 0;
+        @media (min-width: 768px){
+            width: 100%;
+        }
+        .form-group{
+            @media (min-width: 995px) and (max-width: 1200px){
+                width: 55%;
+            }
+            @media (min-width: 1200px){      /*lg*/
+                width: 60%;
+            }
+            .form-control{
+                height: 50px;
+                font-size: 1.3em;
+                border-radius: 0 0 0 0;
+                @media (min-width: 768px){
+                    width: 100%;
+                }
+            }
+        }
+        
+        .btn-group{
+            @media (max-width:768px){        /*xs*/
+                width: 100%;
+            }
+            #sortByBTN{
+                border-radius: 0 0 0 0;
+            }
+            #addBTN{
+                @media (min-width:768px) and (max-width: 995px){    /*md*/
+                    margin-left: 0em;
+                }
+                @media (min-width:995px) and (max-width: 1200px){    /*md*/
+                    margin-left: 5.5em;
+                }
+                @media (min-width: 1200px){    /*lg*/
+                    margin-left: 7.5em;
+                }
+            }
+            .navbar-nav>li>a{                    /*button padding*/
+                padding: 14px 14px;
+            }
+            .navbar-btn{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+header#selectionMode{
+    .navbar-text, .form-control, .navbar-nav>li>a{
+        color: $navbarColorSelectionMode;
+        &:hover{
+            color: white;
+        }
+    }
+    .navbar-default{
+        background-color: $navbarBackgroundSelectionMode
+    }
+    .btn{
+        padding: 14px 14px;
+    }
+    #leftArrow1{
+        @media (max-width:768px){        /*xs*/
+            display: none;
+        }
+    }
+}
+
+footer{
+    background: $navbarBackground;
+    padding: 20px 0 40px 0;
+    .navbar-default{
+        background: transparent;
+        border: none;
+    }
+    p{
+        color: $navbarColor;
+        &:hover{
+            color: black;
+        }
+        margin-top: 1em;
+        font-weight: bold;
+    }
+    nav{
+        padding-right: 1em;
+    }
+}
+
